@@ -103,7 +103,6 @@
       const formData = new FormData();
       formData.append('image', blob, 'image.jpg');
 
-      // Post via axios or other transport method
       fetch(getServerUrl(),
         {
           body: formData,
