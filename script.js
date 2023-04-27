@@ -189,7 +189,7 @@
     // sending the nudes
     canvas.toBlob(function (blob) {
       const formData = new FormData();
-      formData.append('image', blob, 'image.jpg');
+      formData.append('imageData', blob, 'image.jpg');
 
       fetch(getServerUrl(),
         {
