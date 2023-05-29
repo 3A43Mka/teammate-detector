@@ -15,7 +15,48 @@ body {
     flex-direction: column;
 }
 
+.heading {
+    text-transform: uppercase;
+    font-size: 40px;
+    padding: 5px 0;
+    width: 100%;
+    text-align: center;
+    font-family: Impact;
+}
+
 .upload-input {
+    display: none;
+}
+
+.buttons-block {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.detect-button {
+    padding: 5px 15px;
+    border-radius: 5px;
+    background: #398da8;
+    color: white;
+    border: 1px solid #357388;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.upload-button {
+    padding: 5px 15px;
+    border-radius: 5px;
+    background: #40a839;
+    color: white;
+    border: 1px solid #2f792a;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.url-input-label {
     display: none;
 }
 
@@ -23,6 +64,7 @@ body {
     position: relative;
     width: 640px;
     height: 480px;
+    margin-top: 30px;
 }
 
 .video {

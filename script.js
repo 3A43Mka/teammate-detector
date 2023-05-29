@@ -77,6 +77,9 @@
     const app = dqs("#app");
     const container = createElement("div");
     setClassName(container, "container");
+    const heading = createElement("div");
+    setClassName(heading, "heading");
+    setInnerText(heading, "Detect a team member!");
     const videoContainer = createElement("div");
     setClassName(videoContainer, "video-container");
     const videoElement = createElement("video");
@@ -86,6 +89,10 @@
     const videoStill = createElement("div");
     videoStill.id = "video-still";
     setClassName(videoStill, "video-still");
+
+    const buttonsBlock = createElement("div");
+    setClassName(buttonsBlock, "buttons-block");
+
     const detectButton = createElement("button");
     setClassName(detectButton, "detect-button");
     detectButton.id = "detect-button";
@@ -106,14 +113,16 @@
     const labelText = createElement("span");
     setInnerText(labelText, "Url to send request to");
     const urlInput = createElement("input");
-    urlInput.value = "https://httpbin.org/post";
+    urlInput.value = "http://localhost:8080/recognize";
     urlInput.id = "url-input";
 
     appendChild(videoContainer, videoElement);
     appendChild(videoContainer, videoStill);
+    appendChild(container, heading);
     appendChild(container, videoContainer);
-    appendChild(container, detectButton);
-    appendChild(container, uploadImageButton);
+    appendChild(buttonsBlock, detectButton);
+    appendChild(buttonsBlock, uploadImageButton);
+    appendChild(container, buttonsBlock);
     appendChild(container, uploadInput);
     appendChild(urlInputLabel, labelText);
     appendChild(urlInputLabel, urlInput);
